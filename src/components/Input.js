@@ -6,11 +6,9 @@ import { FaRegTrashAlt } from "react-icons/fa";
 const Input = ({task, handleDelete, tasks}) => {
 
     const [isReadOnly, setReadOnly] = useState(true);
-    const handleEdit = (e) => {
-      let input = e.target.parentElement.previousSibling;
+    const handleEdit = () => {
       setReadOnly((isReadOnly) => isReadOnly = false)
     }
-    const [newTasks, setNewTasks] = useState(tasks);
     const saveNewInputValue = (e, id) => {
         let input = e.target.previousSibling;
         setReadOnly((isReadOnly) => isReadOnly = true)   
@@ -22,17 +20,16 @@ const Input = ({task, handleDelete, tasks}) => {
         return (
             <>
             <input readOnly={isReadOnly} defaultValue={task.task} type="text"></input>
-            <button className="icon" onClick={(e) => saveNewInputValue(e, task.id)}>Save</button>
+            <button className="btn" onClick={(e) => saveNewInputValue(e, task.id)}>Save</button>
             </>
         )   
-
     }
     else{ 
         return (
             <>
             <input readOnly={isReadOnly} defaultValue={task.task} type="text"></input>
             <span className="icon">
-                <AiFillEdit onClick={(e) => handleEdit(e)}/>
+                <AiFillEdit onClick={handleEdit}/>
             </span>
             <span className="icon" onClick={() => handleDelete(task.id)}>
                 <FaRegTrashAlt />

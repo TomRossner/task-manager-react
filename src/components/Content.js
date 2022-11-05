@@ -2,7 +2,7 @@ import "./components.css";
 import "./Icons.css";
 import TaskList from "./TaskList";
 
-const Tasks = ({ tasks, handleCheck, handleDelete, handleEdit, setTasks }) => {
+const Tasks = ({ tasks, handleCheck, handleDelete, handleEdit }) => {
   return (
     <div className="tasks-container">
       {tasks.length ? (
@@ -11,7 +11,6 @@ const Tasks = ({ tasks, handleCheck, handleDelete, handleEdit, setTasks }) => {
           handleCheck={handleCheck}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
-          setTasks={setTasks}
         />
       ) : (
         <p>You have no tasks</p>

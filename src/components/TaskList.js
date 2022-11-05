@@ -1,6 +1,6 @@
 import Task from "./Task";
 
-const TaskList = ({ tasks, handleCheck, handleDelete, handleEdit, setTasks }) => {
+const TaskList = ({ tasks, handleCheck, handleDelete, handleEdit }) => {
   return (
     <ul>
       {tasks.map((task) => (
@@ -11,7 +11,6 @@ const TaskList = ({ tasks, handleCheck, handleDelete, handleEdit, setTasks }) =>
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           tasks={tasks}
-          setTasks={setTasks}
         />
       ))}
     </ul>

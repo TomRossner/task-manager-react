@@ -38,21 +38,6 @@ function App() {
     setTasks(tasksList);
   };
 
-
-
-  // <li className={taskClass}>
-  //         <span className="icon" onClick={() => handleCheck(task.id)}>
-  //           <HiCheck />
-  //         </span>
-  //         <input readOnly type="text" value={task.task}></input>
-  //         <span className="icon">
-  //           <AiFillEdit onClick={() => handleEdit(task.id)}/>
-  //         </span>
-  //         <span className="icon" onClick={() => handleDelete(task.id)}>
-  //           <FaRegTrashAlt />
-  //         </span>
-  //       </li>
-
   return (
     <div className="App">
       <Header title="Task Manager"/>
@@ -65,7 +50,6 @@ function App() {
         tasks={tasks}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
-        setTasks={setTasks}
       />
     </div>
   );
