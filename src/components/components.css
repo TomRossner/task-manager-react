@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+header{
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+header h1{
+    font-size: 2.5rem;
+    color: rgb(86, 255, 142);
+}
+
+.tasks-container{
+    width: 50%;
+    border-radius: 5px;
+    background-color: transparent;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks-container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.tasks-container p{
+    font-family: "Ubuntu", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.3rem;
+}
+
+.task{
+    max-width: 22rem;
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem;
+    background-color: rgb(56, 56, 56);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.task input{
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    border: none;
+    width: 90%;
+}
+
+.task.completed{
+    background-color: rgb(4, 163, 57);
+}
+
+.task.completed .icon:first-child{
+    color: rgb(255, 255, 255);
+}
+
+.task.completed .icon{
+    color: rgb(255, 255, 255);
+}
+
+.task.completed .icon:last-child:hover{
+    color: rgb(252, 55, 55);
+}
+
+.addForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    margin: 1rem 0 2rem 0;
+}
+
+.addForm input{
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    font-size: 1rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    justify-self: stretch;
+}
+
+.addForm input::placeholder{
+    padding: 0.3rem;
+}
+
+.add{
+    border: none;
+    color: rgb(0, 180, 45);
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.2s, color 0.2s;
+    border-left: 1px solid rgb(218, 218, 218);
+}
+
+.add:hover{
+    color: white;
+    background-color: rgb(0, 180, 45);
+}
+
+.add span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0.37rem 0.5rem;
+}

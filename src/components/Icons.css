@@ -1,0 +1,27 @@
+.icon{
+    color: rgb(156, 156, 156);
+    padding: 0.3rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.icon:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.icon:first-child:hover{
+    color: rgb(6, 153, 6);
+}
+
+.icon:last-child:hover{
+    color: rgb(150, 6, 6);
+}
+
+.icon:nth-child(3):hover{
+    color: rgb(226, 226, 79);
+}
