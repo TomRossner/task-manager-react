@@ -6,12 +6,14 @@ import { FaRegTrashAlt } from "react-icons/fa";
 const Input = ({task, handleDelete, tasks}) => {
 
     const [isReadOnly, setReadOnly] = useState(true);
-    const handleEdit = () => {
-      setReadOnly((isReadOnly) => isReadOnly = false)
+    const handleEdit = (e) => {
+        let input = e.target.closest("span").previousSibling;
+        input.focus();
+        setReadOnly((isReadOnly) => isReadOnly = false);
     }
     const saveNewInputValue = (e, id) => {
         let input = e.target.previousSibling;
-        setReadOnly((isReadOnly) => isReadOnly = true)   
+        setReadOnly((isReadOnly) => isReadOnly = true); 
         let task = tasks.map((task) => task.id === id ? {...task, task: input.value} : task);
         localStorage.setItem("tasks-list", JSON.stringify(task));
     }
@@ -29,12 +31,11 @@ const Input = ({task, handleDelete, tasks}) => {
             <>
             <input readOnly={isReadOnly} defaultValue={task.task} type="text"></input>
             <span className="icon">
-                <AiFillEdit onClick={handleEdit}/>
+                <AiFillEdit onClick={(e) => handleEdit(e)}/>
             </span>
             <span className="icon" onClick={() => handleDelete(task.id)}>
                 <FaRegTrashAlt />
             </span>
-            
             </>
         )
     }
