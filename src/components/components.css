@@ -17,6 +17,7 @@ header h1{
     background-color: transparent;
     /* border: 1px solid black; */
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -141,4 +142,36 @@ header h1{
 .btn:hover{
     background-color: rgb(66, 194, 98);
     color: white;
+}
+
+footer p{
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem auto;
+    color: rgb(240, 240, 240);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear{
+    flex: 1;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s;
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer #githubIcon.bi.bi-github{
+    font-size: 1.5rem;
 }

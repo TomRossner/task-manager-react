@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import AddTask from "./components/AddTask";
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks-list")) || []);
@@ -51,6 +52,7 @@ function App() {
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
+      <Footer/>
     </div>
   );
 }
