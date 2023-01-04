@@ -7,7 +7,7 @@ const Footer = () => {
         <>
         <div className="clear"></div>
         <footer>
-            <p>Tasks Manager by Tom Rossner&copy;</p>
+            <p>Tasks Manager by Tom Rossner&copy; {new Date().getFullYear()}</p>
             <div className='icons-container'>
             <a
                 href="https://github.com/TomRossner"
