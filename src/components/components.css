@@ -12,10 +12,9 @@ header h1{
 }
 
 .tasks-container{
-    width: 50%;
+    width: 60%;
     border-radius: 5px;
     background-color: transparent;
-    /* border: 1px solid black; */
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -29,20 +28,19 @@ header h1{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 45%;
     list-style: none;
     padding: 0;
 }
 
 .tasks-container p{
     font-family: "Ubuntu", sans-serif;
-    /* font-family: "Poppins", sans-serif; */
     color: rgba(255, 255, 255, 0.3);
     font-size: 1.3rem;
 }
 
 .task{
-    max-width: 22rem;
-    width: 90%;
+    min-width: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -144,18 +142,64 @@ header h1{
     color: white;
 }
 
+footer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
 footer p{
     font-family: "Ubuntu", sans-serif;
     font-style: italic;
     font-size: 1.1rem;
     font-weight: 400;
+    width: auto;
     text-align: center;
-    margin: 1rem auto;
     color: rgb(240, 240, 240);
     display: flex;
     gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+footer .icons-container{
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+
+}
+footer .icons-container .nav-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+footer .icons-container .icon{
+    scale: 1.5;
+}
+
+#github, #linkedin{
+    color: rgba(0, 0, 0, 0.7);
+    transition: color 0.2s linear;
+}
+
+#github:hover{
+    color: rgb(247, 247, 247);
+}
+
+#linkedin:hover{
+    color: rgb(26, 85, 194);
+}
+
+
+@media screen and (min-width: 150px) and (max-width: 500px) {
+    footer p{
+        font-size: 0.8rem;
+        word-break: normal;
+    }
 }
 
 .clear{

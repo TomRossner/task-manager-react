@@ -1,12 +1,33 @@
 import "./components.css";
-import { Github } from "react-bootstrap-icons";
+import { VscGithubInverted } from "react-icons/vsc";
+import { TfiLinkedin } from "react-icons/tfi";
 
 const Footer = () => {
     return (
         <>
         <div className="clear"></div>
         <footer>
-            <p>by Tom Rossner&copy; <a id="githubLink" href="https://github.com/TomRossner"><Github className="icon white"/></a></p>
+            <p>Tasks Manager by Tom Rossner&copy;</p>
+            <div className='icons-container'>
+            <a
+                href="https://github.com/TomRossner"
+                target="_blank"
+                rel="noreferrer"
+                className='nav-link'
+                title='Tom Rossner on Github'
+            >
+                <VscGithubInverted className='icon' id='github'/>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/tom-rossner-824b7a233/"
+                target="_blank"
+                rel="noreferrer"
+                className='nav-link'
+                title='Tom Rossner on LinkedIn'
+            >
+                <TfiLinkedin className='icon' id='linkedin'/>
+            </a>
+        </div>
         </footer>
         </>
     )
